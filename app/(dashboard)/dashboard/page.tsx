@@ -6,7 +6,7 @@ import React from 'react'
 const DashboardPage = () => {
   const decoded = auth()
   if(decoded === null)
-    redirect("/register")
+    redirect("/login")
   return (
     <div>
         <IdeaGenerator />

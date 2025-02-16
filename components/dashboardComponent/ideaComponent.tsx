@@ -14,7 +14,7 @@ import { Input } from "@/components/ui/input";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useForm } from "react-hook-form";
 import { z } from "zod";
-import { useRouter } from "next/navigation";
+import { redirect, useRouter } from "next/navigation";
 import axios from "axios";
 import { chatSchema } from "@/schemas/chatSchema";
 import { Textarea } from "../ui/textarea";
@@ -58,6 +58,7 @@ const IdeaGenerator = () => {
       }
     } catch (error) {
       console.error("Error while generating idea:", error);
+      redirect("/login")
     }
     finally{
       setLoading(false)
