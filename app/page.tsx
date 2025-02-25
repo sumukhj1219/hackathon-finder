@@ -1,12 +1,11 @@
-import { CarouselDemo } from '@/components/globalComponents/caroselComponent';
-import { Carousel } from '@/components/ui/carousel';
+import { HeroScrollDemo } from '@/components/globalComponents/branding';
 import Image from 'next/image'
 import React from 'react'
 
 const Page = () => {
   return (
     <>
-    <div className="relative flex items-center justify-center mx-auto h-screen w-full">
+    <div className="relative flex items-center justify-center mx-auto h-screen w-full ">
       <img 
         className="w-full h-full object-cover"
         src="./cover.jpg"
@@ -22,7 +21,7 @@ const Page = () => {
         The Ultimate Hub for Hackathons
       </h1>
     </div>
-    <CarouselDemo />
+    <HeroScrollDemo />
     </>
     
   );
