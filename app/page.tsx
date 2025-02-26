@@ -1,4 +1,7 @@
+import HackingBanner from '@/components/globalComponents/banner';
+import { BentoGridDemo } from '@/components/globalComponents/bento';
 import { HeroScrollDemo } from '@/components/globalComponents/branding';
+import { InfiniteMovingCardsDemo } from '@/components/globalComponents/cards';
 import Image from 'next/image'
 import React from 'react'
 
@@ -22,6 +25,8 @@ const Page = () => {
       </h1>
     </div>
     <HeroScrollDemo />
+    <BentoGridDemo />
+    <InfiniteMovingCardsDemo />
     </>
     
   );

@@ -2,10 +2,12 @@
 import React from "react";
 import { ContainerScroll } from "../ui/container-scroll-animation";
 import Image from "next/image";
+import HackingBanner from "./banner";
 
 export function HeroScrollDemo() {
   return (
     <div className="flex flex-col overflow-hidden">
+      
       <ContainerScroll
         titleComponent={
           <>
@@ -18,9 +20,11 @@ export function HeroScrollDemo() {
           </>
         }
       >
-        <Image
-          src={`/linear.webp`}
-          alt="hero"
+        <video
+          src={`/demo.mp4`}
+          muted
+          autoPlay
+          loop
           height={720}
           width={1400}
           className="mx-auto rounded-2xl object-cover h-full object-left-top"

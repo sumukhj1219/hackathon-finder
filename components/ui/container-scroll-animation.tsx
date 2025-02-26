@@ -1,6 +1,7 @@
 "use client";
 import React, { useRef } from "react";
 import { useScroll, useTransform, motion, MotionValue } from "framer-motion";
+import HackingBanner from "../globalComponents/banner";
 
 export const ContainerScroll = ({
   children,
@@ -30,12 +31,14 @@ export const ContainerScroll = ({
   };
 
   return (
+    <>
+    <HackingBanner />
     <div
-      className="flex items-center justify-center relative p-2 md:p-20"
+      className="flex items-center justify-center relative p-2 "
       ref={containerRef}
     >
       <div
-        className="py-10 md:py-40 w-full relative"
+        className="py-10 md:py-20 w-full relative"
         style={{
           perspective: "1000px",
         }}
@@ -45,6 +48,8 @@ export const ContainerScroll = ({
         </Card>
       </div>
     </div>
+    </>
+    
   );
 };
 
