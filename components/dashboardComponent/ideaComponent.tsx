@@ -58,7 +58,7 @@ const IdeaGenerator = () => {
       }
     } catch (error) {
       console.error("Error while generating idea:", error);
-      redirect("/login")
+      return redirect("/login")
     }
     finally{
       setLoading(false)

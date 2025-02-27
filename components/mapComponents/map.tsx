@@ -31,7 +31,7 @@ const MapComponent = () => {
     if (navigator.geolocation) {
       navigator.geolocation.getCurrentPosition(
         (pos) => setPosition([pos.coords.latitude, pos.coords.longitude]),
-        (err) => console.error("Geolocation error:", err)
+        (err) => console.log("Geolocation error:", err)
       );
     }
     fetchHackathons();

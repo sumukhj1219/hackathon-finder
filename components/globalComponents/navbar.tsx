@@ -14,7 +14,7 @@ const Navbar = () => {
   ];
 
   return (
-    <div className='p-4 w-full z-10 top-0 left-0 fixed h-20 bg-black shadow-md shadow-red-500'>
+    <div className='p-4 w-full z-10 top-0 left-0 fixed h-20 bg-primary shadow-md'>
       <nav className='flex items-center justify-between max-w-6xl mx-auto'>
         <Image
           className='rounded-full'

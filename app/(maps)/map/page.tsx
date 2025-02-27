@@ -7,8 +7,9 @@ import React from 'react'
 
 const MapPage = () => {
   const decoded = auth()
-  if(!decoded){
-    redirect("/login")
+  //@ts-ignore
+  if(decoded?.email === null){
+    return redirect("/login")
   }
   return (
     <div>

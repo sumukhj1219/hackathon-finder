@@ -3,10 +3,13 @@ import IdeaGenerator from '@/components/dashboardComponent/ideaComponent'
 import { redirect } from 'next/navigation'
 import React from 'react'
 
-const DashboardPage = () => {
-  const decoded = auth()
-  if(decoded === null)
-    redirect("/login")
+const DashboardPage = async () => {  
+  const decoded = await auth() 
+  //@ts-ignore
+  if (!decoded || !decoded.email) {
+    return redirect("/login")
+  }
+
   return (
     <div>
         <IdeaGenerator />
